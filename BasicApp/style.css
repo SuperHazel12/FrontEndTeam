@@ -86,3 +86,24 @@ body{
     height: 100%;
     z-index: 0;
 }
+
+/*right-side*/
+.main
+{
+    margin-left: 260px;
+    background-color: lightgreen;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.office
+{
+    z-index: 1;
+    position: relative;
+    height: 600px;
+    width: 1000px;
+    background-color: white;
+}
