@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katchup Landing page</title>
+    <link rel="stylesheet" href="styles.css" />
+     <script src="index.js"></script>
+  </head>
+  <body style="background-color: #fff0cf">
+    <nav>
+      <div
+        class="text-white container mx-auto px-6 py-2 flex justify-between items-center"
+        style="background-color: #e44c3c"
+      >
+        <a class="font-Lobster text-cinnabar text-2xl lg:text-4xl" href="#">
+          Katchup
+        </a>
+        <div class="block lg:hidden">
+          <button
+            class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none"
+          >
+            <svg
+              class="fill-current h-3 w-3"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div class="font-custom text-cinnabar hidden lg:block">
+          <ul class="inline-flex">
+            <li>
+              <a class="px-4 no-underline hover:underline text-lg" href="/"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="px-4 no-underline hover:underline text-lg" href="#"
+                >About</a
+              >
+            </li>
+            <li>
+              <a class="px-4 no-underline hover:underline text-lg" href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--Hero-->
+    <div  class=" bg-fixed container mx-auto flex flex-col bor md:flex-row items-center my-12 md:my-24 border-b-8  border-gray-300"
+    >
+        <!--Left Col-->
+        <div class="lex flex-col w-full lg:w-1/2 justify-center items-start pt-12 pb-24 px-6 text-black">
+            <img src="img/sample-feat.png" alt="sample1" />
+        </div>
+        <!--Right Col-->
+        <div class="flex flex-col w-full lg:w-1/2 justify-center items-start pt-12 pb-24 px-6 text-black">
+        <h1 class="  font-Lobster text-3xl uppercase tracking-loose">A sample Tagline</h1>
+			<h1 class=" font-custom  my-4 text-2xl">Katchup</h1>
+			<p class="font-custom  leading-normal mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. At est esse consectetur cumque quis fugit quia natus aliquid. Provident deleniti ratione maiores vitae quisquam, magnam non natus dicta molestias placeat magni et quasi ducimus voluptates ab quibusdam minima nobis voluptas quidem, culpa sint! Ab delectus odit eum sapiente? Voluptatibus cum quae quas aspernatur, vitae, architecto enim ipsam cupiditate harum, repudiandae optio in sit similique. Ipsum perspiciatis harum maiores? Enim, similique odio autem iste temporibus dolores ratione natus earum recusandae libero dolorem, mollitia, hic iure nulla molestias dicta blanditiis! Odio maxime perferendis nisi non dignissimos quis aliquid ullam veritatis optio corporis.</p>
+		</div>
+    </div class="">
+
+    <!-- Features -->
+    <div>
+        <section class="container mx-auto px-6 p-10 border-b-8 border-gray-300">
+            <h2 onclick="reset()"
+            class=" cursor-pointer font-Lobster text-6xl font-bold text-center mb-8">
+                Features
+            </h2>
+
+        <div class="flex items-center flex-wrap mb-20">
+          <div class="w-full md:w-1/2">
+              <h4 id="feat-type" class=" font-custom text-3xl text-cinnabar font-bold mb-3">
+                
+              </h4>
+              <p id="feat-desc" class="font-custom text-cinnabar mb-8">
+                
+              </p>
+          </div>
+          <div class="w-full md:w-1/2">
+            <img id="myImage" src="img/living-room.png.png"/>
+          </div>
+        </div>
+
+
+        <div>
+            <div class="mt-8 grid lg:grid-cols-3 gap-10">
+            <!-- cards go here -->
+            <div onclick=feature1(); class="card hover:shadow-lg items-center"> 
+                <img src="img/sofa.png" alt="stew" class="h-32 sm:h-48 w-full object-cover">
+                <div class="m-4">
+                  <h4 class=" font-bold">Feature1</h4>
+              </div>
+            </div>
+  
+           <div onclick="feature2()" class="card hover:shadow-lg items-center"> 
+                <img src="img/feature2.png" alt="stew" class="h-32 sm:h-48 w-full object-cover">
+                <div class="m-4">
+                  <h4 class=" font-bold">Feature2</h4>
+               </div>
+            </div>
+
+            <div onclick="feature3('img/feature3.png')" class="card hover:shadow-lg items-center"> 
+                <img src="img/feature3.png" alt="stew" class="h-32 sm:h-48 w-full object-cover">
+                <div class="m-4">
+                  <h4 class=" font-bold">Feature3</h4>
+                </div>
+            </div>
+        </div>
+        
+           
+        </section>
+        
+    </div>
+  </body>
+</html>
+
+
