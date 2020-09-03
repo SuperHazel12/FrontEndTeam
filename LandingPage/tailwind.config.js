@@ -1,3 +1,4 @@
+// tailwind.config.js
 module.exports = {
   purge: [],
   theme: {
@@ -5,4 +6,4 @@ module.exports = {
   },
   variants: {},
   plugins: [],
-}
+};

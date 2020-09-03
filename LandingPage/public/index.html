@@ -7,53 +7,51 @@
     <link rel="stylesheet" href="styles.css" />
      <script src="index.js"></script>
   </head>
-  <body style="background-color: #fff0cf">
-    <nav>
-      <div
-        class="text-white container mx-auto px-6 py-2 flex justify-between items-center"
-        style="background-color: #e44c3c"
-      >
-        <a class="font-Lobster text-cinnabar text-2xl lg:text-4xl" href="#">
-          Katchup
+  <body class=" bg-cover bg-center"
+  style="background-image: url('img/bg-home.png');">
+    
+  <header class="text-white border-b md:flex md:items-center md:justify-between p-4 pb-0 shadow-lg md:pb-4"
+    style="background-color: #e44c3c"
+  >
+  
+  <!-- Logo text or image -->
+  <div class="flex items-center justify-between mb-4 md:mb-0">
+    <h1 class="leading-none text-2xl text-grey-darkest">
+      <img src="img/nav-logo.png" class=" h-9 w-20" alt="">
+    </h1>
+
+    <a class="text-black hover:text-orange md:hidden" href="#">
+      <i class="fa fa-2x fa-bars"></i>
+    </a>
+  </div>
+  
+  
+  <!-- Navigation -->
+  <nav></nav>
+    <ul class="list-reset md:flex md:items-center">
+      <li class="md:ml-4">
+        <a class="block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
+          Home
         </a>
-        <div class="block lg:hidden">
-          <button
-            class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none"
-          >
-            <svg
-              class="fill-current h-3 w-3"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
-          </button>
-        </div>
-        <div class="font-custom text-cinnabar hidden lg:block">
-          <ul class="inline-flex">
-            <li>
-              <a class="px-4 no-underline hover:underline text-lg" href="/"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a class="px-4 no-underline hover:underline text-lg" href="#"
-                >About</a
-              >
-            </li>
-            <li>
-              <a class="px-4 no-underline hover:underline text-lg" href="#"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+      </li>
+      <li class="md:ml-4">
+        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
+          About
+        </a>
+      </li>
+      <li class="md:ml-4">
+        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Navigation -->
+
+</header>
 
     <!--Hero-->
-    <div  class=" bg-fixed container mx-auto flex flex-col bor md:flex-row items-center my-12 md:my-24 border-b-8  border-gray-300"
+    <div  class=" bg-fixed container mx-auto flex flex-col bor md:flex-row items-center my-12 md:my-24 border-double border-4 border-gray-600"
     >
         <!--Left Col-->
         <div class="lex flex-col w-full lg:w-1/2 justify-center items-start pt-12 pb-24 px-6 text-black">
@@ -69,7 +67,7 @@
 
     <!-- Features -->
     <div>
-        <section class="container mx-auto px-6 p-10 border-b-8 border-gray-300">
+        <section class="container mx-auto px-6 p-10 border-double border-4 border-gray-600">
             <h2 onclick="reset()"
             class=" cursor-pointer font-Lobster text-6xl font-bold text-center mb-8">
                 Features
@@ -77,10 +75,10 @@
 
         <div class="flex items-center flex-wrap mb-20">
           <div class="w-full md:w-1/2">
-              <h4 id="feat-type" class=" font-custom text-3xl text-cinnabar font-bold mb-3">
+              <h4 id="feat-type" class=" font-custom text-3xl  font-bold mb-3">
                 
               </h4>
-              <p id="feat-desc" class="font-custom text-cinnabar mb-8">
+              <p id="feat-desc" class="font-custom mb-8">
                 
               </p>
           </div>
@@ -114,10 +112,12 @@
                 </div>
             </div>
         </div>
-        
-           
         </section>
-        
+        <div class=" mx-auto px-6 ">
+          <img class="object-cover sm:object-cover md:object-fill lg:object-none xl:object-scale-down" src="img/bg-homedwb.png">
+        </div>
+    </div>
+    </div>
     </div>
   </body>
 </html>
