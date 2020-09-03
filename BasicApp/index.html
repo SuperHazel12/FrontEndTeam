@@ -1,43 +1,65 @@
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <title> KatchUp </title>
-
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-
-    <body>
-        <!-- Sidebar Container-->
-        <div class = "sidenav">
-
-            <!-- Sidebar Header-->
-            <div class = "sideheader">
-                Redtomatods
-
-                <!-- Sidebar Header Image-->
-                <div class ="sideheaderimg">
-                    <img src ="./images/rtdslogo.png" width =110px; height=110px;>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    
+    <title>Katchup</title>
+</head>
+<body>
+    <div class="side-bar">
+        <div class="card">
+            <div class="office-name">
+                <span class="room-name">Redtomatods</span>
+                <button class= "but-arrow"><span>^</span></button>
             </div>
 
-            <!-- Sidebar Content-->
-            <div class = "sidecont">   
-
-
-                <!-- Sidebar Rooms-->
-                <ul style="list-style-type:none;">
-                    <li> <span class="roomicon"> </span> AVR </li>
-                    <li> <span class="roomicon"> </span> Nap-pods </li>
-                    <li> <span class="roomicon"> </span> Movie Room </li>
-                    <li> <span class="roomicon"> </span> Meeting Room </li>
-                </ul>
-
+            <div class="sideheaderimg">
+                <img src="./images/rtdslogo.png" width=125px; height=125px;>
             </div>
         </div>
 
-    </body>
+        <div class="flex-content">
+        <div class="status-bar">
+            <div class="status">
+                <div class="dot"></div>
+                <div class="text">Status</div>
+            </div>
+        </div>
+<!-- 
+        <div class="channel">
 
+        </div> -->
+
+        <div class="sidecont">
+            <div class="channel-title">Rooms</div>
+            <!-- Sidebar Rooms-->
+            <ul style="list-style-type:none;">
+                <div class="container">
+                    <li> <span class="roomicon" style="background-color: red;"> </span> AVR </li>
+                    <div class="people">
+                        <img src="./images/avatar.PNG" class="avatar">
+                        <img src="./images/avatar2.PNG" class="avatar">
+                    </div> 
+                </div>               
+                <li> <span class="roomicon" style="background-color: purple;"> </span> Nap-pods </li>
+                <li> <span class="roomicon" style="background-color: lightcoral;"> </span> Movie Room </li>
+                <li> <span class="roomicon"> </span> Meeting Room </li>
+            </ul>
+        </div>
+</div>
+
+    </div>
+
+    <div class="main">
+        <div class="office">
+        </div>
+
+        <!-- <div class="footer">
+            <div class="footer-button">
+            </div>
+        </div> -->
+        
+    </div>
+</body>
 </html>
