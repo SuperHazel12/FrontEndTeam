@@ -1,10 +1,10 @@
 function reset() {
-  document.getElementById("myImage").src = "img/living-room.png.png";
+  document.getElementById("myImage").src = "img/feature-display.png";
   document.getElementById("feat-type").innerHTML = "";
   document.getElementById("feat-desc").innerHTML = "";
 }
 function feature1() {
-  document.getElementById("myImage").src = "img/sofa.png";
+  document.getElementById("myImage").src = "img/feature1.png";
   document.getElementById("feat-type").innerHTML = "Feature1";
   document.getElementById("feat-desc").innerHTML =
     "Feature1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis quod consectetur repellat autem, cupiditate et accusamus ipsum. Aperiam minus itaque eveniet cum aliquid dolore, ab, non quia ullam beatae corrupti? ";
