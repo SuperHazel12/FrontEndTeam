@@ -152,6 +152,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .office {
@@ -178,11 +179,15 @@ table{
 }
 
 .left-cell{
-  text-align: center;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
 }
 
 .right-cell{
-  text-align: center;
+  text-align: right;
+  padding: 0px;
+  margin: 0px;
 }
 
 /* .footer-button
@@ -214,4 +219,29 @@ table{
   width: 30px;
   height: 30px;
   border-radius: 50%;
+}
+
+.footertest
+{
+  display: flex;
+  margin-top: 10px;
+  align-items: left;
+  width: 1000px;
+  
+}
+
+/* .item1
+{
+  flex-basis: 50%;
+}
+
+.item2
+{
+  flex-basis:50%;
+  justify-content: flex-end;
+} */
+
+td, table{
+  padding: 0;
+  margin:0;
 }
