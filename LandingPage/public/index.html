@@ -5,10 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Katchup Landing page</title>
     <link rel="stylesheet" href="styles.css" />
-     <script src="index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js"
+      defer
+    ></script>
+    <script src="index.js"></script>
+
+    <style>
+		[x-cloak] {
+			display: none;
+		}
+
+		.duration-300 {
+			transition-duration: 300ms;
+		}
+
+		.ease-in {
+			transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+		}
+
+		.ease-out {
+			transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+		}
+
+		.scale-90 {
+			transform: scale(.9);
+		}
+
+		.scale-100 {
+			transform: scale(1);
+		}
+	</style>
   </head>
+
+
+
+
   <body class="bg-repeat-round"
-  style="background-image: url('img/bg-home.png');">
+  style="background-image: url('img/bg-home.png');"
+  x-data="{ 'showModal': false }" @keydown.escape="showModal = false" x-cloak
+  >
     
   <header class="text-white border-b md:flex md:items-center md:justify-between p-4 pb-0 shadow-lg md:pb-4"
     style="background-color: #e44c3c"
@@ -30,12 +66,12 @@
   <nav>
     <ul class="list-reset md:flex md:items-center">
       <li class="md:ml-4">
-        <a class="block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
+        <a class="block underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="index.html">
           Home
         </a>
       </li>
       <li class="md:ml-4">
-        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
+        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="about.html">
           About
         </a>
       </li>
@@ -59,11 +95,85 @@
         </div>
         <!--Right Col-->
         <div class="flex flex-col w-full lg:w-1/2 justify-center items-start pt-12 pb-24 px-6 text-black">
-        <h1 class="  font-Lobster text-3xl uppercase tracking-loose">A sample Tagline</h1>
-			<h1 class=" font-custom  my-4 text-2xl">Katchup</h1>
-			<p class="font-custom  leading-normal mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. At est esse consectetur cumque quis fugit quia natus aliquid. Provident deleniti ratione maiores vitae quisquam, magnam non natus dicta molestias placeat magni et quasi ducimus voluptates ab quibusdam minima nobis voluptas quidem, culpa sint! Ab delectus odit eum sapiente? Voluptatibus cum quae quas aspernatur, vitae, architecto enim ipsam cupiditate harum, repudiandae optio in sit similique. Ipsum perspiciatis harum maiores? Enim, similique odio autem iste temporibus dolores ratione natus earum recusandae libero dolorem, mollitia, hic iure nulla molestias dicta blanditiis! Odio maxime perferendis nisi non dignissimos quis aliquid ullam veritatis optio corporis.</p>
-		</div>
+          <h1 class="  font-Lobster text-3xl uppercase tracking-loose">A sample Tagline</h1>
+			    <h1 class=" font-custom  my-4 text-2xl">Katchup</h1>
+          <p class="font-custom  leading-normal mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. At est esse consectetur cumque quis fugit quia natus aliquid. Provident deleniti ratione maiores vitae quisquam, magnam non natus dicta molestias placeat magni et quasi ducimus voluptates ab quibusdam minima nobis voluptas quidem, culpa sint! Ab delectus odit eum sapiente? Voluptatibus cum quae quas aspernatur, vitae, architecto enim ipsam cupiditate harum, repudiandae optio in sit similique. Ipsum perspiciatis harum maiores? Enim, similique odio autem iste temporibus dolores ratione natus earum recusandae libero dolorem, mollitia, hic iure nulla molestias dicta blanditiis! Odio maxime perferendis nisi non dignissimos quis aliquid ullam veritatis optio corporis.</p>
+          <button type="button" class="bg-white border-black font-bold rounded-full mt-6 py-4 px-8 shadow-lg uppercase tracking-wider hover:text-cinnabar transition ease-out duration-500" @click="showModal = true">Try Katchup for Free</button>
+        </div>
+        <section class="flex flex-wrap p-4 h-full items-center">
+
+		
+
+		<!--Overlay-->
+		<div class="overflow-auto" style="background-color: rgba(0,0,0,0.5)" x-show="showModal" :class="{ 'absolute inset-0 z-10 flex items-center justify-center': showModal }">
+			<!--Dialog-->
+			<div class="bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg py-4 text-left px-6" x-show="showModal" @click.away="showModal = false" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="ease-in duration-300" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90">
+
+				<!--Title-->
+				<div class="flex justify-between items-center pb-3">
+					<p class="text-2xl font-bold">Sign Up</p>
+					<div class="cursor-pointer z-50" @click="showModal = false">
+						<svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+							<path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+						</svg>
+					</div>
+				</div>
+
+				<!-- content -->
+				<form class="w-full max-w-lg">
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+        First Name
+      </label>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="First Name">
+      <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+    </div>
+    <div class="w-full md:w-1/2 px-3">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+        Last Name
+      </label>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Last Name">
+    </div>
+  </div>
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full px-3">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-email">
+        Email
+      </label>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="text" placeholder="email@email">
+    </div>
+    <div class="w-full px-3">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+        Password
+      </label>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="************">
+    </div>
+  </div>
+</form>
+
+				<!--Footer-->
+				<div class="flex justify-end pt-2">
+					<button class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2" @click="alert('Sign-Up');">Signup</button>
+          <button class="modal-close px-4 p-3 rounded-lg text-white hover:bg-indigo-400"
+          style="background-color: #e44c3c;"
+          @click="showModal = false">Close</button>
+				</div>
+
+
+			</div>
+			<!--/Dialog -->
+		</div><!-- /Overlay -->
+
+	</section>
     </div class="">
+
+    
+
+
+
+
+
 
     <!-- Features -->
     <div>
@@ -121,5 +231,4 @@
     </div>
   </body>
 </html>
-
 
