@@ -46,45 +46,83 @@
   x-data="{ 'showModal': false }" @keydown.escape="showModal = false" x-cloak
   >
     
-  <header class="text-white border-b md:flex md:items-center md:justify-between p-4 pb-0 shadow-lg md:pb-4"
-    style="background-color: #e44c3c"
-  >
-  
-  <!-- Logo text or image -->
-  <div class="flex items-center justify-between mb-4 md:mb-0">
-    <h1 class="leading-none text-2xl text-grey-darkest">
-      <img src="img/nav-logo.png" class=" h-10 w-23" alt="">
-    </h1>
+     <nav
+      class="flex items-center justify-between flex-wrap p-6 fixed w-full z-10 top-0"
+      x-data="{ isOpen: false }"
+      @keydown.escape="isOpen = false"
+      :class="{ 'shadow-lg bg-indigo-900' : isOpen , 'bg-gray-800' : !isOpen}"
+      style="background-color: #e44c3c"
+    >
+      <!--Logo etc-->
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <h1 class="leading-none text-2xl text-grey-darkest">
+          <img src="img/nav-logo.png" class="h-10 w-23" alt="" />
+        </h1>
+      </div>
 
-    <a class="text-black hover:text-orange md:hidden" href="#">
-      <i class="fa fa-2x fa-bars"></i>
-    </a>
-  </div>
-  
-  
-  <!-- Navigation -->
-  <nav>
-    <ul class="list-reset md:flex md:items-center">
-      <li class="md:ml-4">
-        <a class="block underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="index.html">
-          Home
-        </a>
-      </li>
-      <li class="md:ml-4">
-        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="about.html">
-          About
-        </a>
-      </li>
-      <li class="md:ml-4">
-        <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
-          Contact
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <!-- Navigation -->
+      <!--Toggle button (hidden on large screens)-->
+      <button
+        @click="isOpen = !isOpen"
+        type="button"
+        class="block lg:hidden px-2 text-gray-500 hover:text-white focus:outline-none focus:text-white"
+        :class="{ 'transition transform-180': isOpen }"
+      >
+        <svg
+          class="h-6 w-6 fill-current"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            x-show="isOpen"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+          />
+          <path
+            x-show="!isOpen"
+            fill-rule="evenodd"
+            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+          />
+        </svg>
+      </button>
 
-</header>
+      <!--Menu-->
+      <div
+        class="w-full flex-grow lg:flex lg:items-center lg:w-auto"
+        :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
+        @click.away="isOpen = false"
+        x-show.transition="true"
+      >
+        <ul
+          class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center"
+        >
+          <li class="mr-3">
+            <a
+              class="inline-block py-2 px-4 text-white no-underline"
+              href="#"
+              @click="isOpen = false"
+              >Home
+            </a>
+          </li>
+          <li class="mr-3">
+            <a
+              class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+              href="#"
+              @click="isOpen = false"
+              >About
+            </a>
+          </li>
+          <li class="mr-3">
+            <a
+              class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+              href="#"
+              @click="isOpen = false"
+              >Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <!--Hero-->
     <div  class=" bg-fixed container mx-auto flex flex-col bor md:flex-row items-center my-12 md:my-24 border-double border-4 border-gray-600"
@@ -98,7 +136,8 @@
           <h1 class="  font-Lobster text-3xl uppercase tracking-loose">A sample Tagline</h1>
 			    <h1 class=" font-custom  my-4 text-2xl">Katchup</h1>
           <p class="font-custom  leading-normal mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. At est esse consectetur cumque quis fugit quia natus aliquid. Provident deleniti ratione maiores vitae quisquam, magnam non natus dicta molestias placeat magni et quasi ducimus voluptates ab quibusdam minima nobis voluptas quidem, culpa sint! Ab delectus odit eum sapiente? Voluptatibus cum quae quas aspernatur, vitae, architecto enim ipsam cupiditate harum, repudiandae optio in sit similique. Ipsum perspiciatis harum maiores? Enim, similique odio autem iste temporibus dolores ratione natus earum recusandae libero dolorem, mollitia, hic iure nulla molestias dicta blanditiis! Odio maxime perferendis nisi non dignissimos quis aliquid ullam veritatis optio corporis.</p>
-          <button type="button" class="bg-white border-black font-bold rounded-full mt-6 py-4 px-8 shadow-lg uppercase tracking-wider hover:text-cinnabar transition ease-out duration-500" @click="showModal = true">Try Katchup for Free</button>
+          <button type="button" class=" bg-red-600 text-white border-black font-bold rounded-full mt-6 py-4 px-8 shadow-lg uppercase tracking-wider hover:bg-primary hover:bg-white hover:text-red-600 transition ease-out duration-500" @click="showModal = true">Try Katchup for Free</button>
+            
         </div>
         <section class="flex flex-wrap p-4 h-full items-center">
 
@@ -154,7 +193,7 @@
 
 				<!--Footer-->
 				<div class="flex justify-end pt-2">
-					<button class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2" @click="alert('Sign-Up');">Signup</button>
+					<button class="px-4 bg-transparent p-3 rounded-lg hover:bg-gray-100 hover:text-indigo-400 mr-2" style="color: #e44c3c;" @click="alert('Sign-Up');">Signup</button>
           <button class="modal-close px-4 p-3 rounded-lg text-white hover:bg-indigo-400"
           style="background-color: #e44c3c;"
           @click="showModal = false">Close</button>
