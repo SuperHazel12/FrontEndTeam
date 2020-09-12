@@ -47,7 +47,7 @@
   >
     
      <nav
-      class="flex items-center justify-between flex-wrap p-6 fixed w-full z-10 top-0"
+      class="flex items-center justify-between flex-wrap p-6 relative w-full z-10 top-0"
       x-data="{ isOpen: false }"
       @keydown.escape="isOpen = false"
       :class="{ 'shadow-lg bg-indigo-900' : isOpen , 'bg-gray-800' : !isOpen}"
