@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>About us</title>
+    <title>Contact</title>
   </head>
-  <body class="bg-repeat-round" style="background-image: url(img/bg-about.png)">
+  <body
+    class="bg-repeat-round"
+    style="background-image: url(img/bg-contact.png)"
+  >
     <nav
       class="flex items-center justify-between flex-wrap p-6 fixed w-full z-10 top-0"
       x-data="{ isOpen: false }"
@@ -67,7 +70,7 @@
           </li>
           <li class="mr-3">
             <a
-              class="inline-block py-2 px-4 text-white no-underline"
+              class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
               href="about.html"
               @click="isOpen = false"
               >About
@@ -75,7 +78,7 @@
           </li>
           <li class="mr-3">
             <a
-              class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
+              class="inline-block py-2 px-4 text-white no-underline"
               href="contact.html"
               @click="isOpen = false"
               >Contact
