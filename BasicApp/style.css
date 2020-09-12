@@ -162,6 +162,11 @@ li {
   background-color: white;
 }
 
+.room{
+  height: 600px;
+  width: 1000px;
+}
+
 /* footer */
 .footer {
   position: fixed;
