@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
     <title>Katchup</title>
 </head>
@@ -20,20 +21,48 @@
             </div>
         </div>
 
+        <div class="mods">
+            <ul style="list-style-type:none">
+                <li>
+                    <table>
+                        <tr>
+                            <th style="text-align: left">Status</th>
+                            <th style="text-align: right"><i class='fas fa-pen'></i></th>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <table>
+                        <tr>
+                            <th style="text-align: left">Avatar</th>
+                            <th style="text-align: right"><i class='fas fa-user-alt'></i></i></th>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <table>
+                        <tr>
+                            <th style="text-align: left">Preferences</th>
+                            <th class="ellipsis"><i class="fa fa-ellipsis-v"></i></th>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+        </div>
+
         <div class="flex-content">
-            <div class="status-bar">
+            <!-- <div class="status-bar">
                 <div class="status">
                     <div class="dot"></div>
                     <div class="text">Status</div>
                 </div>
-            </div>
+            </div> -->
 <!-- 
         <div class="channel">
 
         </div> -->
-
             <div class="sidecont">
-                <div class="channel-title">Rooms</div>
+                <div class="channel-title"><b>Room</b></div>
                 <!-- Sidebar Rooms-->
                 <ul style="list-style-type:none;">
                     <div class="container">
@@ -53,6 +82,7 @@
     </div>
 
     <div class="main">
+        <div class="room-title"><b>Room Name</b></div>
         <div class="office">
             <img src="images/room.jpg" class = "room">
         </div>
