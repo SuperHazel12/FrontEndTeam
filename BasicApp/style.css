@@ -1,0 +1,439 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.side-bar {
+  height: 100%;
+  width: 260px;
+  background-color: white;
+  position: fixed;
+}
+/* card of side-bar */
+.card {
+  background-color: #ed1c24;
+  width: 100%;
+  height: 150px;
+  padding-top: 0;
+  border-radius: 0px 0px 8px 8px;
+}
+
+/*container of title of company*/
+.office-name {
+  position: relative;
+  top: 20px;
+  left: 10px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* logo */
+.sideheaderimg {
+  padding-top: 10px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*company name*/
+.room-name {
+  font-size: 16;
+  color: white;
+  flex-grow: 2;
+  flex-wrap: wrap;
+  display: inline-block;
+  width: 60%;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*drop down icon*/
+.but-arrow {
+  display: inline-block;
+  width: 40%;
+  flex-grow: 1;
+  color: white;
+
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+/* container below card of side bar*/
+.flex-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  z-index: 0;
+}
+/*modifications*/
+.mods {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.ellipsis {
+  justify-content: right;
+}
+
+/*status row container*/
+.status-bar {
+  display: inline-block;
+  height: 20px;
+  width: 100%;
+  position: relative;
+  top: 25px;
+  margin-left: 30px;
+}
+
+/*status row child*/
+.status {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/*icon of status*/
+.dot {
+  border-radius: 50%;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: greenyellow;
+}
+
+/*Status text*/
+.text {
+  font-size: 16px;
+}
+
+/*Room title*/
+.channel-title {
+  margin-top: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.sidecont {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 14px;
+  color: black;
+}
+
+/* Icon per Room */
+.roomicon {
+  height: 15px;
+  width: 15px;
+  background-color: seagreen;
+  border-radius: 25%;
+  display: inline-block;
+}
+
+/* List of Rooms in Sidebar */
+ul {
+  margin: 0;
+  padding: 0;
+  line-height: 25px;
+}
+
+li {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/*left-side*/
+.main {
+  margin-left: 260px;
+  background-color: #4ebc6d;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.room-title {
+  padding-bottom: 15px;
+  letter-spacing: 5px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.office {
+  z-index: 1;
+  position: relative;
+  height: 600px;
+  width: 1000px;
+  background-color: white;
+}
+
+.room {
+  height: 600px;
+  width: 1000px;
+}
+
+/* footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 1276px;
+  margin-left: 260px;
+  background-color: #f3d25b;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+}
+
+.left-cell {
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+}
+
+.right-cell {
+  text-align: right;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* .footer-button
+{
+    display: block;
+    position: relative;
+    top: 100px;
+} */
+
+.btn {
+  background-color: #f3d25b;
+  border: none;
+  color: #e44c3c;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.people {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 -2px 4px;
+}
+
+.avatar {
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.footertest {
+  display: flex;
+  margin-top: 10px;
+  align-items: left;
+  width: 1000px;
+}
+
+/* .item1
+{
+  flex-basis: 50%;
+}
+.item2
+{
+  flex-basis:50%;
+  justify-content: flex-end;
+} */
+
+td,
+table {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+h4,
+h5 {
+  line-height: 1.5em;
+  margin: 0;
+}
+
+hr {
+  background: #e9e9e9;
+  border: 0;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 1px;
+  margin: 0;
+  min-height: 1px;
+}
+
+img {
+  border: 0;
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+input {
+  border: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: normal;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+} /* For IE 6/7 */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* ---------- LIVE-CHAT ---------- */
+
+#live-chat {
+  bottom: 0;
+  font-size: 12px;
+  right: 24px;
+  position: fixed;
+  width: 300px;
+}
+
+#live-chat header {
+  background: #f3d25b;
+  border-radius: 5px 5px 0 0;
+  color: black;
+  cursor: pointer;
+  padding: 16px 24px;
+}
+
+#live-chat h4:before {
+  background: #1a8a34;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 8px;
+  margin: 0 8px 0 0;
+  width: 8px;
+}
+
+#live-chat h4 {
+  font-size: 15px;
+  text-align: center;
+}
+
+#live-chat h5 {
+  font-size: 10px;
+}
+
+#live-chat form {
+  padding: 24px;
+}
+
+#live-chat input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 8px;
+  outline: none;
+  width: 234px;
+}
+
+.chat-message-counter {
+  background: #e62727;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: none;
+  font-size: 12px;
+  font-weight: bold;
+  height: 28px;
+  left: 0;
+  line-height: 28px;
+  margin: -15px 0 0 -15px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 28px;
+}
+
+.chat-close {
+  background: #1b2126;
+  border-radius: 50%;
+  color: #fff;
+  display: block;
+  float: right;
+  font-size: 10px;
+  height: 16px;
+  line-height: 16px;
+  margin: 2px 0 0 0;
+  text-align: center;
+  width: 16px;
+}
+
+.chat {
+  background: #fff;
+}
+
+.chat-history {
+  height: 252px;
+  padding: 8px 24px;
+  overflow-y: scroll;
+}
+
+.chat-message {
+  margin: 16px 0;
+}
+
+.chat-message img {
+  border-radius: 50%;
+  float: left;
+}
+
+.chat-message-content {
+  margin-left: 56px;
+}
+
+.chat-time {
+  float: right;
+  font-size: 10px;
+}
+
+.chat-feedback {
+  font-style: italic;
+  margin: 0 0 0 80px;
+}

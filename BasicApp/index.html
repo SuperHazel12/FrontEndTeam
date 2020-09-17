@@ -1,0 +1,171 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <title>Katchup</title>
+</head>
+<body>
+    <div class="side-bar">
+        <div class="card">
+            <div class="office-name">
+                <span class="room-name">Redtomatods</span>
+                <button class= "but-arrow"><span><i class="fa fa-caret-down"></i></span></button>
+            </div>
+
+            <div class="sideheaderimg">
+                <img src="./images/rtdslogo.png" width=125px; height=125px;>
+            </div>
+        </div>
+
+        <div class="mods">
+            <ul style="list-style-type:none">
+                <li>
+                    <table>
+                        <tr>
+                            <th style="text-align: left">Status</th>
+                            <th style="text-align: right"><i class='fas fa-pen'></i></th>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <table>
+                        <tr>
+                            <th style="text-align: left">Avatar</th>
+                            <th style="text-align: right"><i class='fas fa-user-alt'></i></i></th>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <table>
+                        <tr>
+                            <th style="text-align: left">Preferences</th>
+                            <th class="ellipsis"><i class="fa fa-ellipsis-v"></i></th>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+        </div>
+
+        <div class="flex-content">
+            <div class="sidecont">
+                <div class="channel-title"><b>Room</b></div>
+                <!-- Sidebar Rooms-->
+                <ul style="list-style-type:none;">
+                    <div class="container">
+                        <li> <span class="roomicon" style="background-color: red;"> </span> AVR </li>
+                        <div class="people">
+                            <img src="./images/avatar.PNG" class="avatar">
+                            <img src="./images/avatar2.PNG" class="avatar">
+                        </div> 
+                    </div>               
+                    <li> <span class="roomicon" style="background-color: purple;"> </span> Nap-pods </li>
+                    <li> <span class="roomicon" style="background-color: lightcoral;"> </span> Movie Room </li>
+                    <li> <span class="roomicon"> </span> Meeting Room </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main">
+        <div class="room-title"><b>Room Name</b></div>
+        <div class="office">
+            <img src="images/room.jpg" class = "room">
+        </div>
+            <div class="footertest">
+                    <table>
+                        <tr>
+                            <th class="left-cell">
+                                <button class="btn"><i class="fa fa-lock"></i></button>
+                                <button class="btn"><i class="fa fa-tint"></i></button>
+                            </th>
+                            <th class="right-cell">
+                                <button class="btn"><i class="fa fa-smile-o"></i></button>
+                                <button class="btn"><i class="fa fa-comment"></i></button>
+                            </th>
+                        </tr>
+                    </table>
+                
+            </div>
+     
+    </div>
+</body>
+
+<div id="live-chat">
+		
+		<header class="clearfix">
+			
+			<a href="#" class="chat-close">x</a>
+
+			<h4>ROOM NAME</h4>
+
+			<span class="chat-message-counter">2</span>
+
+		</header>
+
+		<div class="chat">
+			
+			<div class="chat-history">
+				
+				<div class="chat-message clearfix">
+					
+					<img src="images/avatar.png" alt="" width="32" height="32">
+
+					<div class="chat-message-content clearfix">
+						
+						<span class="chat-time">13:35</span>
+
+						<h5>User 1</h5>
+
+						<p>Hello Guys</p>
+
+					</div> <!-- end chat-message-content -->
+
+				</div> <!-- end chat-message -->
+
+				<hr>
+
+				<div class="chat-message clearfix">
+					
+					<img src="images/avatar2.png" alt="" width="32" height="32">
+
+					<div class="chat-message-content clearfix">
+						
+						<span class="chat-time">13:37</span>
+
+						<h5>User2</h5>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, nulla accusamus magni vel debitis numquam qui tempora rem voluptatem delectus!</p>
+
+					</div> <!-- end chat-message-content -->
+
+				</div> <!-- end chat-message -->
+
+			</div> <!-- end chat-history -->
+
+			<p class="chat-feedback">Someone is typing</p>
+
+			<form action="#" method="post">
+
+				<fieldset>
+					
+					<input type="text" placeholder="Type your message…" autofocus>
+					<input type="hidden">
+
+				</fieldset>
+
+			</form>
+
+		</div> 
+
+	</div> 
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	
+</html>
+
+<script src="index.js"></script>

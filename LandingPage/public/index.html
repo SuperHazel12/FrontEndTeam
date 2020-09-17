@@ -41,7 +41,7 @@
 
 
 
-  <body class="bg-repeat-round"
+  <body class="w-screen h-screen bg-center"
   style="background-image: url('img/bg-home.png');"
   x-data="{ 'showModal': false }" @keydown.escape="showModal = false" x-cloak
   >
@@ -173,8 +173,7 @@
 
 				<!--Footer-->
 				<div class="flex justify-end pt-2">
-          <button class="modal-close px-4 p-3 rounded-lg text-white hover:bg-indigo-400"
-          style="background-color: #e44c3c;"
+          <button class="modal-close rounded-full bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
           @click="showModal = false">Close</button>
 				</div>
 
@@ -240,11 +239,11 @@
                 </div>
             </div>
         </div>
-        </section>
-        <div class=" mx-auto">
+        </section>      
+    </div>
+    <div class=" mx-auto">
           <img class="object-cover h-auto w-auto sm:object-cover md:object-fill lg:object-none xl:object-scale-down" src="img/bg-homedwb.png">
         </div>
-    </div>
     </div>
     </div>
   </body>
