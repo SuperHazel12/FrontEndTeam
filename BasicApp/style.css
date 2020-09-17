@@ -158,7 +158,7 @@ li {
 /*left-side*/
 .main {
   margin-left: 260px;
-  background-color: #4ebc6d;
+  background-color:#ECECEC;
   height: 100%;
   z-index: 0;
   display: flex;
