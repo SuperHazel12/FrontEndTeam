@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Helvetica;
+  background-image: url('./images/bg-inhouseExper.png');
 }
 
 .side-bar {
@@ -158,13 +159,17 @@ li {
 /*left-side*/
 .main {
   margin-left: 260px;
-  background-color:#ECECEC;
+  /* background-color:#ECECEC; */
   height: 100%;
   z-index: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .room-title {
