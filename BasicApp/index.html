@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="app.js"></script>
+    
     <title>Katchup</title>
 </head>
 <body>
+    
     <div class="side-bar">
         <div class="card">
             <div class="office-name">
@@ -28,7 +29,7 @@
                     <table>
                         <tr>
                             <th style="text-align: left;color:#3d3d3d;">Status</th>
-                            <th style="text-align: right"><i class='fas fa-pen' style="color:#3d3d3d;"></i></th>
+                            <th style="text-align: right"><button class="button" id="myBtn"><i class='fas fa-pen' style="color:#3d3d3d;"></i></button></th>
                         </tr>
                     </table>
                 </li>
@@ -84,7 +85,8 @@
 
     </div>
 
-   
+
+
     
     <div class="main">
         <div class="room-title"><b>Room Name</b></div>
@@ -138,5 +140,17 @@
         </div> -->
     </div>
     
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Status</p>
+        
+    </div>
+
+</div>
+<script src="app.js"></script>
 </body>
 </html>
