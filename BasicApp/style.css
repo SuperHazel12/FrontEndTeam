@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: Helvetica;
   background-image: url('./images/bg-inhouseExper.png');
+  background-repeat: no-repeat;
 }
 
 .side-bar {
@@ -324,7 +325,7 @@ hr
   margin: auto;
   padding: 15px;
   border: 1px solid #888;
-  width: 50%;
+  width: 45%;
 }
 
 /* The Close Button */
@@ -340,4 +341,69 @@ hr
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.modal-flex
+{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
+.textStatus
+{
+
+  display: inline-block;
+ flex-grow:5;
+  margin-right: 15px;
+ padding: 5px;
+  border: 1px solid gray;
+ border-radius: 5px;
+}
+
+
+.colorStatus
+{
+   height: 20px;
+  display: inline-block;
+ flex-grow:0.5;
+  padding: 5px;
+  
+  border: 1px solid gray;
+  border-radius: 5px;
+   margin-right: 15px;
+
+ 
+  height: 20px;
+  width: 20px;
+  background-color: seagreen;
+ 
+  display: inline-block;
+  color: #3d3d3d;
+
+}
+
+.modalBtn
+{
+  border-radius: 5px;
+  border: 1px solid gray;
+  justify-content: right;
+  outline: none;
+}
+
+.but-arrow-modal {
+  display: inline-block;
+  width: 50%;
+  flex-grow: 1;
+  color: white;
+  justify-content: right;
+
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+ 
 }
