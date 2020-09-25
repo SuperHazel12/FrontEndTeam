@@ -13,8 +13,17 @@
     <div class="side-bar">
         <div class="card">
             <div class="office-name">
-                <span class="room-name">Redtomatods</span>
-                <button class= "but-arrow"><span><i class="fa fa-caret-down"></i></span></button>
+                <table>
+                    <tr>
+                        <td style="text-align: left;"><div class="room-name">Redtomatods</div></td>
+                        <td>
+                            <button class= "but-arrow" onclick="dropdownUser()"><span><i class="fa fa-caret-down"></i></span></button>
+                            <div id="userDropdown" class="dropdown-content">
+                                <a href="#loginpage">Logout</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </div>
 
             <div class="sideheaderimg">
@@ -44,7 +53,12 @@
                     <table>
                         <tr>
                             <th style="text-align: left;color:#3d3d3d;">Preferences</th>
-                            <th class="ellipsis"><i class="fa fa-ellipsis-v" style="color:#3d3d3d;"></i></th>
+                            <td style="text-align: right;">
+                                <button class="ellipsis" onclick="dropdownPref()"><span><i class="fa fa-ellipsis-v" style="color:#3d3d3d;"></i></span></button>
+                                <div id="prefDropdown" class="dropdown-content-pref">
+                                    <a href="#Action">Action1</a>
+                                </div>
+                            </td>
                         </tr>
                     </table>
                 </li>
@@ -186,3 +200,37 @@
 </html>
 
 <script src="index.js"></script>
+<script>
+    // Javascript from W3school
+    function dropdownUser() {
+        document.getElementById("userDropdown").classList.toggle("active");
+    }
+    window.onclick = function(event) {
+        if (!event.target.matches('.but-arrow')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                    }
+                }
+            }   
+        }
+    
+    function dropdownPref() {
+        document.getElementById("prefDropdown").classList.toggle("show-pref");
+    }
+    window.onclick = function(event) {
+        if (!event.target.matches('.ellipsis')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                    }
+                }
+            }   
+        }
+</script>
