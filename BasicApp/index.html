@@ -153,7 +153,10 @@
     <div class="modal-content">
         <p>Status</p>
         <div class="modal-flex">
-            <button class="colorStatus"></button> 
+            <!-- <button class="colorStatus"></button>  -->
+            <div id="color-picker-wrapper">
+                <input type="color" value="#00ff00" id="color-picker" class="colorStatus">
+            </div>
             <input class="textStatus"></input>
         </div>
         
@@ -188,5 +191,13 @@
 </div>
 
 <script src="app.js"></script>
+<script>
+    var color_picker = document.getElementById("color-picker");
+    var color_picker_wrapper = document.getElementById("color-picker-wrapper");
+        color_picker.onchange = function() {
+        color_picker_wrapper.style.backgroundColor = color_picker.value;    
+    }
+    color_picker_wrapper.style.backgroundColor = color_picker.value;
+</script>
 </body>
 </html>
