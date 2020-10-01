@@ -19,7 +19,8 @@
                         <td>
                             <button class= "but-arrow" onclick="dropdownUser()"><span><i class="fa fa-caret-down"></i></span></button>
                             <div id="userDropdown" class="dropdown-content">
-                                <a href="#loginpage">Logout</a>
+                                <button><i class="fa fa-power-off" style="margin-right: 5px;"></i>Logout</button>
+                                <button><i class='fas fa-cog' style="margin-right: 5px;"></i>Settings</button>
                             </div>
                         </td>
                     </tr>
@@ -54,9 +55,12 @@
                         <tr>
                             <th style="text-align: left;color:#3d3d3d;">Preferences</th>
                             <td style="text-align: right;">
-                                <button class="ellipsis" onclick="dropdownPref()"><span><i class="fa fa-ellipsis-v" style="color:#3d3d3d;"></i></span></button>
+                                <button class="ellipsis" onclick="dropdownPref()">
+                                        <i class="fa fa-ellipsis-v" style="color:#3d3d3d;"></i>
+                                </button>
                                 <div id="prefDropdown" class="dropdown-content-pref">
-                                    <a href="#Action">Action1</a>
+                                    <button><i class='fas fa-tint' style="margin-right: 5px;"></i>Colors</button>
+                                    <button><i class="fa fa-plus" style="margin-right: 5px;"></i>Add Background</button>
                                 </div>
                             </td>
                         </tr>
