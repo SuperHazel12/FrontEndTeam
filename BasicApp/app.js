@@ -26,7 +26,6 @@ window.onclick = function (event) {
 
 
 //Avatar Modal
-
 var span1 = document.getElementsByClassName("close1")[0];
 
 // When the user clicks the button, open the modal 
