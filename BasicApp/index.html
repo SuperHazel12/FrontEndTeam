@@ -38,7 +38,7 @@
                     <table>
                         <tr>
                             <th style="text-align: left;color:#3d3d3d;">Status</th>
-                            <th style="text-align: right"><i class='fas fa-pen' style="color:#3d3d3d;"></i></th>
+                            <th style="text-align: right"><button class="button" id="myBtn"><i class='fas fa-pen' style="color:#3d3d3d;"></i></button></th>
                         </tr>
                     </table>
                 </li>
@@ -124,7 +124,6 @@
                             </th>
                         </tr>
                     </table>
-             
             </div>
     </div>
     
@@ -134,7 +133,7 @@
 <div id="live-chat">
 		
 		<header class="clearfix">			
-			<!-- <a href="#" class="chat-close">x</a> -->
+			<a href="#" class="chat-close">x</a>
 			<h4>ROOM NAME</h4>
 			<!-- <span class="chat-message-counter">2</span> -->
 		</header>
@@ -156,18 +155,41 @@
 						<h5>User2</h5>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, nulla accusamus magni vel debitis numquam qui tempora rem voluptatem delectus!</p>
 					</div> <!-- end chat-message-content -->
+                </div> <!-- end chat-message -->
+                <div class="chat-message clearfix">	
+					<img src="images/avatar2.png" alt="" width="32" height="32">
+					<div class="chat-message-content clearfix">		
+						<span class="chat-time">13:37</span>
+						<h5>User2</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, nulla accusamus magni vel debitis numquam qui tempora rem voluptatem delectus!</p>
+					</div> <!-- end chat-message-content -->
 				</div> <!-- end chat-message -->
 			</div> <!-- end chat-history -->
 			<p class="chat-feedback">Someone is typing</p>
 			<form action="#" method="post">
-				<fieldset>	
+				<!-- <fieldset>	 -->
 					<input type="text" placeholder="Type your message…" autofocus>
-					<input type="hidden">
-				</fieldset>
+                    <input type="hidden">
+                    <input type="submit" value="send">
+				<!-- </fieldset> -->
 			</form>
 		</div> 
 	</div> 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Status</p>
+        <div class="modal-flex">
+            <button class="colorStatus"></button> 
+            <input class="textStatus"></input>
+            <button class="modalBtn">Set Status</button>
+        </div>
+    </div>
+</div>
 </html>
 
 <script src="script.js"></script>
