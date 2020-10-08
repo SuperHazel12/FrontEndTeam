@@ -69,7 +69,7 @@
                 <table>
                     <tr>
                         <th class="channel-title">Rooms</th>
-                        <th style="text-align: right;"><button class="button" onclick="document.getElementById('avatarModal').style.display='block'"><i class="fas fa-plus add-icon"></i></button></th>
+                        <th style="text-align: right;"><button class="button" onclick="document.getElementById('roomModal').style.display='block'"><i class="fas fa-plus add-icon"></i></button></th>
                     </tr>
                 </table>
                 <!-- Sidebar Rooms-->
@@ -216,9 +216,26 @@
             <div class="spacer"></div>
             <button class="modalBtn" style="margin-right: 5px;"><span class="close1">Close</span></button>
         </div>
-        
+    </div> 
+</div>
+
+<!-- room modal -->
+<div id="roomModal" class="modalRoom">
+    <div class="modal-content-room">
+        <p class="modal_header">Create Room</p>
+        <div class="modal-flex">
+            <div id="color-picker-wrapper">
+                <input type="color" value="#00ff00" id="color-picker" class="colorStatus">
+            </div>
+            <input class="textStatus"></input>
+        </div>
+
+        <div class="close-row">
+            <div class="spacer"></div>
+            <button class="modalBtn" style="margin-right: 5px;"><span class="closeRoom close">Close</span></button>
+            <button class="modalBtn" style="margin-right: 5px;"><span class="close">Create Room</span></button>
+        </div>
     </div>
-    
 </div>
 
 <script src="app.js"></script>

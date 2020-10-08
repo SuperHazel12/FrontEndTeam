@@ -45,3 +45,24 @@ window.onclick = function (event) {
         modalAvatar.style.display = "none";
     }
 }
+
+//Room Modal
+var spanRoom = document.getElementsByClassName("closeRoom")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function () {
+    modal.style.display = "block";
+}
+
+var modalRoom = document.getElementById("roomModal");
+// When the user clicks on <span> (close), close the modal
+spanRoom.onclick = function () {
+    modalRoom.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modalRoom) {
+        modalRoom.style.display = "none";
+    }
+}
