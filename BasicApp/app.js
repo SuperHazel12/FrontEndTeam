@@ -66,3 +66,4 @@ window.onclick = function (event) {
         modalRoom.style.display = "none";
     }
 }
+
