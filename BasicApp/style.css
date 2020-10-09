@@ -147,8 +147,7 @@ body {
   border-radius: 10px;
 }
 
-.dropdown-content-pref a {
->>>>>>> Stashed changes
+/* .dropdown-content-pref a{
   float: none;
   color: black;
   padding: 12px 16px;
