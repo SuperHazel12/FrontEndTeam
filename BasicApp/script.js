@@ -57,7 +57,6 @@ window.onclick = function (event) {
   }
 };
 
-//js for modal
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -72,7 +71,7 @@ btn.onclick = function () {
   modal.style.display = "block";
 };
 
-// When the user clicks on <span> (x), close the modal
+// When the user clicks on <span> (close), close the modal
 span.onclick = function () {
   modal.style.display = "none";
 };
@@ -83,3 +82,26 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+//Avatar Modal
+var span1 = document.getElementsByClassName("close1")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function () {
+  modal.style.display = "block";
+};
+
+var modalAvatar = document.getElementById("avatarModal");
+// When the user clicks on <span> (close), close the modal
+span1.onclick = function () {
+  modalAvatar.style.display = "none";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modalAvatar) {
+    modalAvatar.style.display = "none";
+  }
+};
+
+//color

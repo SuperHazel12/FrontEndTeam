@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 
     <title>Katchup</title>
 </head>
@@ -47,7 +48,7 @@
                     <table>
                         <tr>
                             <th style="text-align: left;color:#3d3d3d;">Avatar</th>
-                            <th style="text-align: right"><i class='fas fa-user-alt' style="color:#3d3d3d;"></i></i></th>
+                            <th style="text-align: right;"><button class="button" onclick="document.getElementById('avatarModal').style.display='block'"><i class="fas fa-user-alt" style="color:#3d3d3d;"></i></button></th>
                         </tr>
                     </table>
                 </li>
@@ -128,9 +129,6 @@
             </div>
     </div>
     
-</body>
-</html>
-
 <div id="live-chat">
 		
 		<header class="clearfix">			
@@ -175,22 +173,81 @@
 				<!-- </fieldset> -->
 			</form>
 		</div> 
-	</div> 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-    
-    <div id="myModal" class="modal">
+</div> 
+   
 
+<!-- The Modal Status -->
+<div id="myModal" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Status</p>
+        <p class="modal_header">Status</p>
         <div class="modal-flex">
-            <button class="colorStatus"></button> 
+            <!-- <button class="colorStatus"></button>  -->
+            <div id="color-picker-wrapper">
+                <input type="color" value="#00ff00" id="color-picker" class="colorStatus">
+            </div>
             <input class="textStatus"></input>
-            <button class="modalBtn">Set Status</button>
+        </div>
+        
+        <div class="status-history">
+            <div class="colorHistory" style="background-color:#f77f00;"></div>
+            <span class="textHistory">Finalizing Document</span>
+        </div>
+
+        <div class="status-history">
+            <div class="colorHistory" style="background-color:#d62828;"></div>
+            <span class="textHistory">LUNCH BREAK</span>
+        </div>
+        <div class="close-row">
+        <div class="spacer"></div>
+        <button class="modalBtn" style="margin-right: 5px;"><span class="close">Close</span></button>
+        <button class="modalBtn" style="margin-right: 5px;"><span class="close">Set Status</span></button>
         </div>
     </div>
 </div>
+
+<!-- Modal Avatar-->
+<div id ="avatarModal" class="modalAvatar">
+    <div class="modal-content-avatar">
+        <p class="modal_header">Change your appearance</p>
+        
+<div class="flex-container">
+    <div class="list-container">
+        <div class="category">Top</div>
+        <div class="category"> Hats</div>
+        <div class="category"> Eyes</div>
+        <div class="category"> Hair</div>
+    </div>
+
+    <div class="items">
+        <div class="items-container">
+            <div class="cardAvatar">
+                <img src="images/pic-icon.png" alt="Avatar" style="height:100%; width:100%;">
+            </div>
+
+            <div class="cardAvatar">
+                <img src="images/pic-icon.png" alt="Avatar" style="height:100%; width:100%;">
+            </div>
+
+            <div class="cardAvatar">
+                <img src="images/pic-icon.png" alt="Avatar" style="height:100%; width:100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="close-row">
+            <div class="spacer"></div>
+            <button class="modalBtn" style="margin-right: 5px;"><span class="close1">Close</span></button>
+        </div>
+        
+    </div>
+    
+</div>
+
+</body>
 </html>
 
+
+  
 <script src="script.js"></script>
