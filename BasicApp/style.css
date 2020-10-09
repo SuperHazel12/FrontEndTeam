@@ -323,7 +323,29 @@ table {
     top: 100px;
 } */
 
-.btn {
+.left-cell button{
+  background-color: white;
+  border: 1px solid#3d3d3d;
+  border-radius: 5px;
+  color: #3d3d3d;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.center-cell button{
+  background-color: white;
+  border: 1px solid#3d3d3d;
+  border-radius: 5px;
+  color: #3d3d3d;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.right-cell button{
   background-color: white;
   border: 1px solid#3d3d3d;
   border-radius: 5px;

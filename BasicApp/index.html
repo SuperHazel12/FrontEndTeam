@@ -104,16 +104,16 @@
                     <table>
                         <tr>
                             <th class="left-cell">
-                                <button class="btn"><i class="fa fa-lock"></i></button>
-                                <button class="btn"><i class="fa fa-bell"></i></button>
+                                <button class="fa fa-lock" onclick="unlock(this)" ></button>
+                                <button class="fa fa-bell" ></button>
                                
                             </th>
                             <th class="center-cell">
-                                  <button class="btn"><i class="fa fa-video-camera"></i></i></button>  
-                                  <button class="btn"><i class="fa fa-microphone"></i></button>
+                                  <button class="fas fa-video-camera" onclick="offCam(this)" ></button>  
+                                  <button class="fas fa-microphone" onclick="offMic(this)" ></button>
                             </th>
                             <th class="right-cell">
-                                <button class="btn"><i class="fa fa-smile-o"></i></button>
+                                <button class="fa fa-smile-o"></button>
 
 
                                 <!-- <button class="btn"><i class="fa fa-comments"></i></button> -->
@@ -172,3 +172,15 @@
 </html>
 
 <script src="script.js"></script>
+<script>
+function unlock(x) {
+  x.classList.toggle("fa-unlock-alt");
+}
+function offCam(y) {
+  y.classList.toggle("fa-video-slash");
+}
+function offMic(z) {
+  z.classList.toggle("fa-microphone-slash");
+}
+</script>
+
