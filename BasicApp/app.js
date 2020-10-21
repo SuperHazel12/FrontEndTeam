@@ -67,3 +67,10 @@ window.onclick = function (event) {
     }
 }
 
+function padlock(x) {
+  x.classList.toggle("fa-unlock");
+} 
+
+function mic(x) {
+x.classList.toggle("fa-microphone-slash");
+}
