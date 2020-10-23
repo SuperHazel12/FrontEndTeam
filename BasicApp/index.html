@@ -254,7 +254,14 @@
     <div class="edit-icon-modal-content">
         <span class="edit-icon-modal-close">&times;</span>
         <p class="modal-header-edit-icon">Edit Account Icon</p>
-        <input type="file">
+        <!-- Not yet functional, code from https://www.smashingmagazine.com/2018/01/drag-drop-file-uploader-vanilla-js/ -->
+            <div id="drop-area">
+                <form class="my-form">
+                    <p>Drag your files here.</p>
+                </form>
+            </div>
+        <input type="file" id="fileElem">
+        <label class="buttonUploadIcon" for="fileElem">Upload Icon</label>
     </div>
 
 </div>
