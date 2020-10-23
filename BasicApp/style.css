@@ -890,6 +890,7 @@ input[type="text"] {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* Drag Upload style box*/
 #drop-area {
   border: 2px dashed #ccc;
   border-radius: 20px;
