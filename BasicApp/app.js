@@ -74,3 +74,10 @@ function padlock(x) {
 function mic(x) {
 x.classList.toggle("fa-microphone-slash");
 }
+
+(function($) {
+  $('nav li').click(function() {
+    $(this).addClass('active').siblings('li').removeClass('active');
+    $('section:nth-of-type('+$(this).data('rel')+')').stop().fadeIn(400, 'linear').siblings('section').stop().fadeOut(100, 'linear'); 
+  });
+})(jQuery);

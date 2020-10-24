@@ -524,7 +524,6 @@ font-size: 25px;
   margin-bottom: 10px;
  }
  
-.category:hover,
 .category:focus {
   color:#ed1c24;
   text-decoration: none;
@@ -533,10 +532,10 @@ font-size: 25px;
 }
 
 
- .items
+ /* .items
  {
   display:block; 
- }
+ } */
  
  
  .items-container
@@ -559,6 +558,7 @@ font-size: 25px;
 
 .cardAvatar:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
 }
 
 
@@ -597,4 +597,26 @@ font-size: 25px;
   width: 20%;
   border-radius: 5px;
   max-height:500px;
+}
+
+section {
+    background: white;
+    position: relative;
+    display: none;
+   
+    width: 740px;
+    min-height: 400px;
+    color: #fff;
+}
+section:first-of-type {
+    display: block;
+}
+ul {
+    list-style: none;
+}
+
+.active
+{
+  background: red;
+  color:white;
 }
