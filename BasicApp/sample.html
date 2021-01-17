@@ -1,0 +1,296 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+    <title>Katchup</title>
+</head>
+<body>
+    <input type="checkbox" id="check" />
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header>Katchup
+        <td>
+                            <button class= "but-arrow" onclick="dropdownUser()"><span><i class="fa fa-caret-down"></i></span></button>
+                            <div id="userDropdown" class="dropdown-content">
+                                <button id="editIcon"><i class="fas fa-edit" style="margin-right: 10px;"></i>Edit Icon</button>
+                                <button><i class="fa fa-user-plus" style="margin-right: 8px;"></i>Invite</button>
+                                <button><i class='fas fa-cog' style="margin-right: 10px;"></i>Settings</button>
+                                <button><i class="fa fa-power-off" style="margin-right: 10px;"></i>Logout</button>
+                            </div>
+         </td>
+      </header>
+      <a href="#" >
+        <i class="fas fa-pen" id="myBtn"></i>
+        <span id="myBtn">Status</span>
+      </a>
+      <a href="#">
+        <i class="fas fa-user-alt class="button" onclick="document.getElementById('avatarModal').style.display='block'""></i>
+        <span>Avatar</span>
+      </a>
+      <a href="#">
+        <button class="ellipsis" onclick="dropdownPref()">
+                                        <i class="fas fa-stream" style="color: white;"></i>
+                                </button>
+                                <div id="prefDropdown" class="dropdown-content-pref">
+                                    <button><i class='fas fa-tint' style="margin-right: 5px;"></i>Colors</button>
+                                    <button><i class="fa fa-plus" style="margin-right: 5px;"></i>Add Background</button>
+                                </div>
+        <!-- <i class="fas fa-stream"></i> -->
+        <span>Preferences</span>
+      </a>
+      <div class="flex-content" style="background-color: white;">
+            <div class="sidecont">
+                <div class="channel-title"><b>Room</b></div>
+                <!-- Sidebar Rooms-->
+                <ul style="list-style-type:none;">
+                    <div class="container">
+                        <li> <span class="roomicon" style="background-color:  #e44c3c;;"> </span> AVR </li>
+                        <div class="people">
+                            <img src="./images/avatar.PNG" class="avatar">
+                            <img src="./images/avatar2.PNG" class="avatar">
+                        </div> 
+                    </div>               
+                    <li> <span class="roomicon" style="background-color: purple;"> </span> Nap-pods </li>
+                    <li> <span class="roomicon" style="background-color: lightcoral;"> </span> Movie Room </li>
+                    <li> <span class="roomicon"> </span> Meeting Room </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="room-title"><b>Room Name</b></div>
+        <div class="office">
+            <img src="images/castle.jpg" class = "room">
+        </div>
+            <div class="footertest">
+                    <table>
+                        <tr>
+                            <th class="left-cell">
+                                <button class="fa fa-lock" onclick="unlock(this)" ></button>
+                                <button class="fa fa-bell" ></button>
+                               
+                            </th>
+                            <th class="center-cell">
+                                  <button class="fas fa-video-camera" onclick="offCam(this)" ></button>  
+                                  <button class="fas fa-microphone" onclick="offMic(this)" ></button>
+                            </th>
+                            <th class="right-cell">
+                                <button class="fa fa-smile-o"></button>
+
+
+                                <!-- <button class="btn"><i class="fa fa-comments"></i></button> -->
+
+                                <a href="#" class="notification">
+                                    <i class="fa fa-comments" id="chatbox"></i>
+                                    <span class="chat-message-counter" >3</span>
+                                </a>
+                            </th>
+                        </tr>
+                    </table>
+            </div>
+    </div>
+    
+<div id="live-chat">
+		
+		<header class="clearfix">			
+			<a href="#" class="chat-close">x</a>
+			<h4>ROOM NAME</h4>
+			<!-- <span class="chat-message-counter">2</span> -->
+		</header>
+		<div class="chat">		
+			<div class="chat-history">		
+				<div class="chat-message clearfix">			
+					<img src="images/avatar.png" alt="" width="32" height="32">
+					<div class="chat-message-content clearfix">			
+						<span class="chat-time">13:35</span>
+						<h5>User 1</h5>
+						<p>Hello Guys</p>
+					</div> <!-- end chat-message-content -->
+				</div> <!-- end chat-message -->
+				<hr>
+				<div class="chat-message clearfix">	
+					<img src="images/avatar2.png" alt="" width="32" height="32">
+					<div class="chat-message-content clearfix">		
+						<span class="chat-time">13:37</span>
+						<h5>User2</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, nulla accusamus magni vel debitis numquam qui tempora rem voluptatem delectus!</p>
+					</div> <!-- end chat-message-content -->
+                </div> <!-- end chat-message -->
+                <div class="chat-message clearfix">	
+					<img src="images/avatar2.png" alt="" width="32" height="32">
+					<div class="chat-message-content clearfix">		
+						<span class="chat-time">13:37</span>
+						<h5>User2</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, nulla accusamus magni vel debitis numquam qui tempora rem voluptatem delectus!</p>
+					</div> <!-- end chat-message-content -->
+				</div> <!-- end chat-message -->
+			</div> <!-- end chat-history -->
+			<p class="chat-feedback">Someone is typing</p>
+			<form action="#" method="post">
+				<!-- <fieldset>	 -->
+					<input type="text" placeholder="Type your message…" autofocus>
+                    <input type="hidden">
+                    <input type="submit" value="send">
+				<!-- </fieldset> -->
+			</form>
+		</div> 
+</div> 
+   
+
+<!-- The Modal Status -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <p class="modal_header">Status</p>
+        <div class="modal-flex">
+            <!-- <button class="colorStatus"></button>  -->
+            <div id="color-picker-wrapper">
+                <input type="color" value="#00ff00" id="color-picker" class="colorStatus">
+            </div>
+            <input class="textStatus"></input>
+        </div>
+        
+        <div class="status-history">
+            <div class="colorHistory" style="background-color:#f77f00;"></div>
+            <span class="textHistory">Finalizing Document</span>
+        </div>
+
+        <div class="status-history">
+            <div class="colorHistory" style="background-color:#d62828;"></div>
+            <span class="textHistory">LUNCH BREAK</span>
+        </div>
+        <div class="close-row">
+        <div class="spacer"></div>
+        <button class="modalBtn" style="margin-right: 5px;"><span class="close">Close</span></button>
+        <button class="modalBtn" style="margin-right: 5px;"><span class="close">Set Status</span></button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Avatar-->
+<div id ="avatarModal" class="modalAvatar">
+    <div class="modal-content-avatar">
+        <p class="modal_header">Change your appearance</p>
+        
+<div class="flex-container">
+    <div class="list-container">
+        <nav>
+            <ul>
+            <li data-rel="1" class="category active">Top</li>
+            <li data-rel="2" class="category"> Hats</li>
+            <li data-rel="3" class="category"> Accessories</li>
+            </ul>
+        </nav>
+    </div>
+
+<!-- Tops -->
+<section>
+<article>
+    <div class="items">
+        <div class="items-container">
+            <div class="cardAvatar">
+                <img src="images/Base.png" alt="Avatar" style="height:100%; width:100%;">
+            </div>
+    
+            <div class="cardAvatar">
+                <img src="images/IICS.png" alt="Avatar" style="height:100%; width:100%;">
+            </div>
+    
+            <div class="cardAvatar">
+                <img src="images/Clothes.png" alt="Avatar" style="height:100%; width:100%;">
+            </div>
+            
+            <div class="cardAvatar">
+                <img src="images/Boy 1.png" alt="Avatar" style="height:100%; width:100%;">
+            </div>
+
+            <div class="cardAvatar">
+                <img src="images/Boy.png" alt="Avatar" style="height:100%; width:100%;">
+            </div>
+    </div>
+</article>
+</section>
+ 
+<!-- hats -->
+<section>
+<article>
+    <div class="items">
+        <div class="items-container">
+            <div class="cardAvatar">
+                <img src="images/Hat.png" alt="Avatar" style="height:100%; width:100%;">
+            </div>
+        </div>
+    </div>
+</article>
+</section>
+
+
+<!-- accessories -->
+<section>
+    <article>
+        <div class="items">
+            <div class="items-container">
+                <div class="cardAvatar">
+                    <img src="images/Shades.png" alt="Avatar" style="height:100%; width:100%;">
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+</div>
+
+        <div class="close-row">
+            <div class="spacer"></div>
+            <button class="modalBtn" style="margin-right: 5px;"><span class="close1">Close</span></button>
+        </div>
+    </div> 
+</div>
+
+<!-- Modal Edit Icon-->
+
+<div id="editIconModal" class="edit-icon-modal">
+
+    <!-- Modal content -->
+    <div class="edit-icon-modal-content">
+        <span class="edit-icon-modal-close">&times;</span>
+        <p class="modal-header-edit-icon">Edit Account Icon</p>
+        <input type="file">
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
+  
+<script src="script.js"></script>
+<script>
+  function unlock(x) {
+        x.classList.toggle("fa-unlock-alt");
+    }
+    function offCam(y) {
+        y.classList.toggle("fa-video-slash");
+    }
+    function offMic(z) {
+        z.classList.toggle("fa-microphone-slash");
+    }
+    
+    var color_picker = document.getElementById("color-picker");
+    var color_picker_wrapper = document.getElementById("color-picker-wrapper");
+        color_picker.onchange = function() {
+        color_picker_wrapper.style.backgroundColor = color_picker.value;    
+    }
+    color_picker_wrapper.style.backgroundColor = color_picker.value;
+</script>
+
